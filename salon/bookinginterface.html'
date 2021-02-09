@@ -1,0 +1,417 @@
+<html>
+<head>
+<link rel="stylesheet" href="bookinginterface.css">
+</head>
+<body>
+<ul>
+  <li><img src="ok.jpg" alt="My Image" height="55px"></li>
+  
+  <li><a class="active" href="home.php">Home </a></li>
+  <li><a href="about.php">About </a></li>
+  <li><a href="info.php">Information </a></li>
+  <li><a href="testimonial.php">Testimonials </a></li>
+  <li><a href="contact.php">Contact</a></li>
+  <li style="float:right"><a  href="home.html" >Logout</a></li>
+    <li style="float:right"><a  href="profile.php" >Profile</a></li>
+  
+</ul>
+<hr color="yellow" size="30">
+<br> <br>
+
+<form action="book2.php" method="post">
+<h1 style="color:red">Slots For:</h1>
+<h3 style="color:blue"><b><?php echo $dt1->format('d-F-Y')."   "."Day:".$dt1->format('l');?></b></h3>
+<div id="c">
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="6-7" onclick="callme()"><span value="6-7">6am-7am</span>
+   </label>
+</div>			
+	<div id="ck-button" name="s">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="7-8" onclick="callme()"><span  value="7-8">7am-8am</span>
+   </label>
+</div>
+	
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="8-9" onclick="callme()"><span>8am-9am</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="9-10" onclick="callme()"><span value="9-10">9am-10am</span>
+   </label>
+</div>
+	
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="10-11" onclick="callme()"><span value="10-11">10am-11am</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="11-12" onclick="callme()"><span value="11-12">11am-12pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="12-13" onclick="callme()"><span value="12-13">12pm-1pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="13-14" onclick="callme()"><span value="13-14">1pm-2pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="14-15" onclick="callme()"><span value="14-15">2pm-3pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="15-16" onclick="callme()"><span value="15-16">3pm-4pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="16-17" onclick="callme()"><span value="16-17">4pm-5pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="17-18" onclick="callme()"><span value="17-18">5pm-6pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="18-19" onclick="callme()"><span value="18-19">6pm-7pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="19-20" onclick="callme()"><span value="19-20">7pm-8pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="20-21" onclick="callme()"><span value="20-21">8pm-9pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="21-22" onclick="callme()"><span value="21-22">9pm-10pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="22-23" onclick="callme()"><span value="22-23">10pm-11pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="b[]" hidden value="23-24" onclick="callme()"><span value="23-24">11pm-12am</span>
+   </label>
+</div>
+</div>
+<br><br><br><br>
+<h3 style="color:blue"><b><?php echo $new_time->format('d-F-Y')."     "."Day:".$new_time->format('l');?></b></h3>
+<div id="c1">
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="6-7" onclick="callme1()" ><span value="6-7">6am-7am</span>
+   </label>
+</div>
+
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="7-8" onclick="callme1()"><span value="7-8">7am-8am</span>
+   </label>
+</div>
+	
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="8-9" onclick="callme1()"><span value="8-9">8am-9am</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="9-10" onclick="callme1()"><span value="9-10">9am-10am</span>
+   </label>
+</div>
+	
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="10-11" onclick="callme1()"><span value="10-11">10am-11am</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="11-12" onclick="callme1()"><span value="11-12">11am-12pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="12-13" onclick="callme1()"><span value="12-13">12pm-1pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="13-14" onclick="callme1()"><span value="13-14">1pm-2pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="14-15" onclick="callme1()"><span value="14-15">2pm-3pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="15-16" onclick="callme1()"><span value="15-16">3pm-4pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="16-17" onclick="callme1()"><span value="16-17">4pm-5pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="17-18" onclick="callme1()"><span value="17-18">5pm-6pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="18-19" onclick="callme1()"><span value="18-19">6pm-7pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="19-20" onclick="callme1()"><span value="19-20">7pm-8pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="20-21" onclick="callme1()"><span value="20-21">8pm-9pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="21-22" onclick="callme1()"><span value="21-22">9pm-10pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="22-23" onclick="callme1()"><span value="22-23">10pm-11pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c[]" hidden value="23-24" onclick="callme1()"><span value="23-24">11pm-12am</span>
+   </label>
+</div>
+</div>
+
+<br><br><br><br>
+<h3 style="color:blue"><b><?php echo $new_time1->format('d-F-Y')."    "."Day:".$new_time1->format('l');?></b></h3>
+<div id="c2">
+
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="6-7" onclick="callme2()"><span value="6-7">6am-7am</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="7-8" onclick="callme2()"><span value="7-8">7am-8am</span>
+   </label>
+</div>
+	
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="8-9" onclick="callme2()"><span>8am-9am</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="9-10" onclick="callme2()"><span value="9-10">9am-10am</span>
+   </label>
+</div>
+	
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="10-11" onclick="callme2()"><span value="10-11">10am-11am</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="11-12" onclick="callme2()"><span value="11-12">11am-12pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="12-13" onclick="callme2()"><span value="12-13">12pm-1pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="13-14" onclick="callme2()"><span value="13-14">1pm-2pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="14-15" onclick="callme2()"><span value="14-15">2pm-3pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="15-16" onclick="callme2()"><span value="15-16">3pm-4pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="16-17" onclick="callme2()"><span value="16-17">4pm-5pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="17-18" onclick="callme2()"><span value="17-18">5pm-6pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="18-19" onclick="callme2()"><span value="18-19">6pm-7pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="19-20" onclick="callme2()"><span value="19-20">7pm-8pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="20-21" onclick="callme2()"><span value="20-21">8pm-9pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="21-22" onclick="callme2()"><span value="21-22">9pm-10pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="22-23" onclick="callme2()"><span value="22-23">10pm-11pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c1[]" hidden value="23-24"onclick="callme2()"><span value="23-24">11pm-12am</span>
+   </label>
+</div>
+</div>
+<br><br><br><br>
+<h3 style="color:blue"><b><?php echo $new_time2->format('d-F-Y')."    "."Day:".$new_time2->format('l');?></b></h3>
+<div id="c3">
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="6-7" onclick="callme3()"><span value="6-7">6am-7am</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="7-8" onclick="callme3()"><span value="7-8">7am-8am</span>
+   </label>
+</div>
+	
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="8-9" onclick="callme3()"><span value="8-9">8am-9am</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="9-10" onclick="callme3()"><span value="9-10">9am-10am</span>
+   </label>
+</div>
+	
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="10-11" onclick="callme3()"><span value="10-11">10am-11am</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="11-12" onclick="callme3()" value="11-12"><span>11am-12pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="12-13" onclick="callme3()"><span value="12-13">12pm-1pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="13-14"onclick="callme3()"><span value="13-14">1pm-2pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="14-15" onclick="callme3()"><span value="14-15">2pm-3pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="15-16" onclick="callme3()"><span value="15-16">3pm-4pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="16-17" onclick="callme3()"><span value="16-17">4pm-5pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="17-18" onclick="callme3()"><span value="17-18">5pm-6pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="18-19" onclick="callme3()"><span value="18-19">6pm-7pm</span>
+   </label>
+</div>
+<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="19-20" onclick="callme3()"><span value="19-20">7pm-8pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="20-21" onclick="callme3()"><span value="20-21">8pm-9pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="21-22" onclick="callme3()"><span value="21-22">9pm-10pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="22-23" onclick="callme3()"><span value="22-23">10pm-11pm</span>
+   </label>
+</div>
+	<div id="ck-button">
+   <label>
+      <input type="checkbox" name="c2[]" hidden value="23-24" onclick="callme3()"><span value="23-24">11pm-12am</span>
+   </label>
+</div>
+</div>
+<br><br><br><br>
+<center><button class="button">BOOK</button></center>
+</form>
+
+<footer>
+<p class="a" >Company © G.O.A.T. All rights reserved.</p>
+</footer>
+</body>
+</html>

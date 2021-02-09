@@ -1,0 +1,148 @@
+<html>
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mystyle1.css">
+<script type = "text/javascript">
+
+function val()
+{
+	//var n,u,p;
+var j,n,e,pa,cp;
+n=document.form1.phoneno.value;
+var i=n.length;
+pa=document.form1.password.value;
+cp=document.form1.password1.value;
+if(pa.length<4)
+{
+	alert("password too short");
+	return false;
+}
+var l=pa.localeCompare(cp);
+
+if(l!==0)
+{
+	alert("password not equal");
+	return false;
+}
+var flag=0;
+e=document.form1.email.value;
+var pos=e.indexOf("@");
+var dotposition=e.lastIndexOf(".");
+
+if(pos<1|| dotposition<pos+2 || dotposition+2>=e.length)
+{
+	alert("please enter valid email");
+	return false;
+}
+console.log(i);
+ if (i!==10)
+{
+	alert("please enter a valid number");
+	return false;
+}
+else{
+for(j=0;j<10;j++)
+{ var c=n.charAt(j);
+if(!(c>=0&&c<=9))
+{
+	flag=1;
+break;
+}
+}
+if(flag==1)
+{
+	alert("enter valid number");
+	return false;
+}
+}
+}	
+function y()
+{
+var x = document.getElementById("i");
+var x1 = document.getElementById("i1");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+  if (x1.type === "password") {
+    x1.type = "text";
+  } else {
+    x1.type = "password";
+  }
+}
+</script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+#section1 {
+  height:1200px;
+  background-color:gold;
+  background-image:url("massage5.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+ 
+}
+#section2 {
+  height:100px;
+  background-color:white;
+  }
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+
+  <center><img src="logoo.jpg" width="100" height="100"></center>
+<ul>
+	<li><a href="test.html">Home</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="feedback.jsp">Feedback</a></li>
+  <li><a href="login1.html">Book Now</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li style="float:right"><a  href="login1.html" >Login</a></li>
+  <li style="float:right"><a href="signup.html">Signup </a></li>
+</ul><hr>
+<div class="main" id="section1">
+  <h1><center>To become a part of us sign up here!</center><br><br>
+  Enter your information.</h1>
+<br><br>
+
+<form name="form1" action="link.jsp" onsubmit="return(val());">
+<p style="color:white">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" required></p><br>
+<p style="color:white">Phone Number<input type="text" name="phoneno" required></p><br>
+<p style="color:white">Address&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="address"></p><br>
+<p style="color:white">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" required></p><br>
+<p style="color:white">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" id="i" required></p><br>
+<p style="color:white">Confirm <br>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password1" id="i1" required></p><br>
+<p style="color:white"> Show password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox"  name="p" style="margin-bottom:15px" onclick="y()"> 
+<button type="submit" class="button">Create my account!</button><br>
+  <h1>Already a member?
+  Please login <a href="login1.html">Here</a></h1>
+</div>
+</form>
+
+<div class="main" id="section2">
+<center><img src="logoo.jpg" width="100" height="100"></center>
+  <address><b>Email id:</b><a href="thetrimhousesalon@gmail.com">THE TRIM HOUSE</a></address>
+  <b>Contact number:</b> +91-9130568553  /  +91-7767091844<br>
+  <b>Address:</b> Mayur Colony,Near Balshikshan School, Kothrud Pune 411038 
+
+<hr>
+</div>
+
+<!--<div class="footer">
+  <p class="a">The Trim House</p>
+</div>-->
+</body>
+</html>

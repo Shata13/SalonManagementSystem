@@ -1,0 +1,115 @@
+<style>
+.democlass {
+   margin:4px;
+    background-color:#ff0000;
+    border-radius:10px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    float:left;
+}
+div label input {
+   margin-right:100px;
+}
+h1 {text-align:center;
+font-family:verdana;
+font-size:50px;
+letter-spacing: 10px;
+line-height: 1.7;
+color: #000033;
+}
+h3 {text-align:center;
+line-height: 0.2;
+font-size:25px;
+font-family:verdana;
+letter-spacing: 4px;
+color: #000033; 
+}
+body {
+    font-family:sans-serif;
+}
+
+#ck-button {
+    margin:4px;
+    background-color:#EFEFEF;
+    border-radius:10px;
+    border:1px solid #D0D0D0;
+    overflow:auto;
+    float:left;
+}
+#ck-button label {
+    float:left;
+    width:7.0em;
+}
+
+#ck-button label span {
+    text-align:center;
+    padding:3px 0px;
+    display:block;
+    border-radius:4px;
+}
+
+#ck-button label input {
+    position:absolute;
+    top:-20px;
+}
+
+#ck-button input:hover + span {
+    background-color:#efE0E0;
+}
+
+#ck-button input:checked + span {
+    background-color:#00ff00;;
+    color:#fff;
+}
+
+#ck-button input:checked:hover + span {
+    background-color:#c11;
+    color:#fff;
+}
+button {
+  background-color:#4CAF50 ;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 35%;
+  opacity: 0.9;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+li {
+  float: left;
+  font-family:verdana;
+}
+
+li a {
+  display: block;
+  color:#ffffff ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:#FFCA33;
+  color:black;
+}
+
+footer{
+      
+      padding: 5px 20px;
+      background: black;
+      color: white;
+}
+p.a{color: white;
+font-family:verdana;
+font-size:20px;
+}
+</style>
